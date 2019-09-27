@@ -1,8 +1,16 @@
 public class Plane {
 
-    private PlaneType planeType;
+    private PlaneType plane;
 
-    public Plane(PlaneType planeType){
-        this.planeType = planeType;
+    public Plane(PlaneType plane){
+        this.plane = plane;
+    }
+
+    public int getCapacity(){
+        return plane.getCapacity();
+    }
+
+    public int getWeight() {
+        return plane.getWeight();
     }
 }

@@ -2,6 +2,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class TestPlane {
 
@@ -14,6 +15,11 @@ public class TestPlane {
 
     @Test
     public void canGetPlaneCapacity(){
-        assertEquals(416, );
+        assertEquals(416, plane.getCapacity());
+    }
+
+    @Test
+    public void canGetWeight(){
+        assertEquals(2000, plane.getWeight());
     }
 }
