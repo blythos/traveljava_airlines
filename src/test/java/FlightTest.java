@@ -42,6 +42,14 @@ public class FlightTest {
     }
 
     @Test
-    
+    public void canOnlyAddPassengersToCapacity(){
+        // Adds passengers to capacity
+        for (int i = 0; i < plane.getCapacity(); i++) {
+            flight.addPassenger(passenger);
+        }
+        // Attempts to add one more beyond capacity
+        flight.addPassenger(passenger);
+        assertEquals(0, flight.availableSeats());
+    }
 
 }
