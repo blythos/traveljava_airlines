@@ -8,6 +8,7 @@ public class Flight {
     private String flightNo;
     private String destination;
     private String airport;
+    private long longtime;
     private Date time;
 
     public Flight(Plane plane, String flightNo, String destination, String airport, long time){
@@ -16,6 +17,7 @@ public class Flight {
         this.flightNo = flightNo;
         this.destination = destination;
         this.airport = airport;
+        this.longtime = time;
         this.time = new Date(time);
     }
 
@@ -37,6 +39,8 @@ public class Flight {
 
     public void addPassenger(Passenger passenger) {
         if (this.availableSeats() > 0){
+            Flight flight = new Flight(this.plane, this.flightNo, this.destination, this.airport, this.longtime);
+            passenger.addFlight(flight);
             this.passengers.add(passenger);
         }
     }
